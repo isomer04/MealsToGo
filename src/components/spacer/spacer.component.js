@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components";
+import styled, { useTheme} from "styled-components";
 
 
 const sizeVariant = {
@@ -32,7 +32,7 @@ const SpacerView = styled.View`
 `;
 
 
-export const Spacer = ({postion, size, children }) => {
+export const Spacer = ({position, size, children }) => {
     const theme = useTheme();
     const variant = getVariant(position, size, theme);
     return <SpacerView variant = {variant} > {children}</SpacerView>
